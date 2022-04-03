@@ -1,0 +1,26 @@
+what is an entity framework
+
+
+In the older days we would have to open a connection, excecute a command, read it and then map it from db to the object and then close the connection
+with EF we dont have to do that anymore
+
+It uses an Object/Relational Mapper to gets the enitity and writes the sql commands to run whatever it needs to do
+
+The DbContext Class
+provides a gateway to our db
+responsible for managing our connection with the db
+has dbset which represents tables inside our db
+
+Uses LINQ queries
+
+EF features
+Modelling
+Querying
+Chanve Tracking
+Saving
+Concurrency
+Transactions
+Caching
+Migrations
+
+code first Migrations
