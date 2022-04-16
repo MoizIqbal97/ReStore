@@ -4,15 +4,15 @@ interface Props {
     products: Product[];
     addProduct: () => void;
 }
-export const Catalog = (props: Props) => {
+export const Catalog = ({products,addProduct}: Props) => {
     return(
     <>
         <ul>
-            {props.products.map(product =>(
+            {products.map(product =>(
                 <li key={product.id}>{product.name} - {product.price}</li>
             ))}
         </ul>
-        <button onClick={props.addProduct}>Add product</button>
+        <button onClick={addProduct}>Add product</button>
     </>            
     )
 }
