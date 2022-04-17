@@ -10,7 +10,10 @@ function App() {
   const palatteType = darkMode ? 'dark':'light';
   const theme = createTheme({
     palette:{
-      mode: palatteType
+      mode: palatteType,
+      background:{
+       default: palatteType === 'light'? '#eaeaea':'#121212'
+      } 
     }
   })
 
