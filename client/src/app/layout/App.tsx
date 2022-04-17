@@ -1,18 +1,21 @@
-import { Typography } from "@mui/material";
+import { Container, CssBaseline, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { Catalog } from "../../features/Catalog/Catalog";
 import { Product } from "../models/product";
+import { Header } from "./Header";
 
 
 
 function App() {
   const [products, setProducts] = useState<Product[]>([]);
 
+  //fetches data
   useEffect(() => {
     fetch('http://localhost:5000/api/products')
     .then(response => response.json())
     .then(data => setProducts(data))
   },[])
+  //adds new product to an existing product
   const addProduct=()=>{
     setProducts(prevState => [...prevState,
       {
@@ -27,8 +30,11 @@ function App() {
 
   return (
     <>
-    <Typography variant = 'h1'>Re-Store</Typography>
+    <CssBaseline />
+    <Header />
+    <Container>
     <Catalog products ={products} addProduct={addProduct}/>
+    </Container>
     </>
   );
 }
