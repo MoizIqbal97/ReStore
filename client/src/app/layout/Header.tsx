@@ -7,7 +7,7 @@ interface Props{
     darkMode: boolean;
     handleThemeChange: () => void;
 }
-
+//test
 const midLinks = [
     {title: 'catalog' , path: '/catalog'},
     {title: 'about' , path: '/about'},
